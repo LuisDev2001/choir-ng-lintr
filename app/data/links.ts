@@ -16,6 +16,17 @@ export const choir = {
   tagline: 'Coro · Alabanza y adoración'
 }
 
+export const aura = {
+  label: 'Descubre tu Aura NG',
+  description: 'Dinámica especial de la jornada',
+  href: 'https://choir-ng-aura.vercel.app/'
+}
+
+export const event = {
+  name: 'San Pedro Fest',
+  startsAt: '2026-08-30T14:00:00-05:00'
+}
+
 export const links: LinkItem[] = [
   {
     label: 'Instagram',
@@ -31,7 +42,7 @@ export const links: LinkItem[] = [
     label: 'Facebook',
     href: 'https://www.facebook.com/cpng.lurin',
     icon: 'i-simple-icons-facebook'
-  },
+  }
 ]
 
 export const coordinators: LinkItem[] = [
