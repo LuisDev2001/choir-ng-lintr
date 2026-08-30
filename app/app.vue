@@ -2,8 +2,8 @@
 useHead({
   htmlAttrs: { lang: 'es' },
   link: [
-    { rel: 'icon', type: 'image/jpeg', href: '/logo-ng.jpg' },
-    { rel: 'apple-touch-icon', href: '/logo-ng.jpg' }
+    { rel: 'icon', type: 'image/png', href: '/favicon.png?v=1' },
+    { rel: 'apple-touch-icon', href: '/favicon.png?v=1' }
   ]
 })
 
