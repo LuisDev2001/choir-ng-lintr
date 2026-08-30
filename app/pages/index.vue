@@ -7,6 +7,7 @@ const year = new Date().getFullYear()
 const now = ref(0)
 const eventTime = new Date(event.startsAt).getTime()
 let countdownTimer: ReturnType<typeof setInterval> | undefined
+const colorMode = useColorMode()
 
 const linkBase = 'group flex items-center justify-between gap-3 rounded-xl border px-4 py-3.5 transition-colors'
 const linkDefault = 'border-muted bg-elevated hover:border-accented hover:bg-accented'
@@ -28,6 +29,10 @@ function cardClass(link: LinkItem) {
   return `${linkBase} ${link.featured ? linkFeatured : linkDefault}`
 }
 
+function toggleColorMode() {
+  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+}
+
 onMounted(() => {
   const updateCountdown = () => {
     now.value = Date.now()
@@ -44,7 +49,19 @@ onBeforeUnmount(() => {
 
 <template>
   <main class="mx-auto w-full max-w-lg px-6 py-12 sm:py-16">
-    <header class="flex flex-col items-center text-center">
+    <header class="relative flex flex-col items-center text-center">
+      <ClientOnly>
+        <UButton
+          :icon="colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
+          :aria-label="colorMode.value === 'dark' ? 'Activar modo claro' : 'Activar modo NG'"
+          color="neutral"
+          variant="ghost"
+          size="sm"
+          square
+          class="absolute -top-2 right-0"
+          @click="toggleColorMode"
+        />
+      </ClientOnly>
       <img
         :src="logo"
         :alt="choir.name"

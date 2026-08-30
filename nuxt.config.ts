@@ -47,7 +47,9 @@ export default defineNuxtConfig({
         'simple-icons:tiktok',
         'simple-icons:facebook',
         'simple-icons:whatsapp',
-        'lucide:arrow-up-right'
+        'lucide:arrow-up-right',
+        'lucide:moon',
+        'lucide:sun'
       ]
     }
   }

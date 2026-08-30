@@ -8,6 +8,35 @@
 :root {
   --ui-radius: 0.5rem;
 
+  --ui-bg: #fff9f7;
+  --ui-bg-muted: #f8ede9;
+  --ui-bg-elevated: #ffffff;
+  --ui-bg-accented: #f4e0e2;
+  --ui-bg-inverted: #34131a;
+
+  --ui-border: #e5c9cb;
+  --ui-border-muted: #f0dddd;
+  --ui-border-accented: #c99096;
+  --ui-border-inverted: #34131a;
+
+  --ui-text: #40242a;
+  --ui-text-highlighted: #2d1319;
+  --ui-text-toned: #71434b;
+  --ui-text-muted: #8c6269;
+  --ui-text-dimmed: #aa858a;
+  --ui-text-inverted: #ffffff;
+
+  --ui-primary: #8f1725;
+  --ui-secondary: #a86d16;
+  --ui-info: #705fbe;
+  --ui-success: #147a5c;
+  --ui-warning: #9a6800;
+  --ui-error: #b21e44;
+
+  color-scheme: light;
+}
+
+.dark {
   --ui-bg: #160B12;
   --ui-bg-muted: #1C1017;
   --ui-bg-elevated: #24131B;
@@ -32,9 +61,12 @@
   --ui-success: #5ED6B0;
   --ui-warning: #F2E85C;
   --ui-error: #FF6685;
+
+  color-scheme: dark;
 }
 
 body {
-  background-color: #160B12;
-  color: #EADBE3;
+  background-color: var(--ui-bg);
+  color: var(--ui-text);
+  transition: background-color 200ms ease, color 200ms ease;
 }
