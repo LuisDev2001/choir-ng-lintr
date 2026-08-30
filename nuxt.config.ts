@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   site: {
     name: 'Coro Nueva Generación',
     description: 'Todos los enlaces del Coro Nueva Generación en un solo lugar.',
-    url: 'https://nueva-generacion.example',
+    url: 'https://choir-ng-lintr.vercel.app',
     defaultLocale: 'es'
   },
 
