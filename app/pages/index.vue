@@ -76,24 +76,50 @@ onBeforeUnmount(() => {
     </header>
 
     <section class="mt-8 rounded-xl border border-primary/40 bg-primary/10 p-4 text-center">
-      <p class="text-xs font-semibold tracking-widest text-primary">ENCUENTRO JUVENIL</p>
-      <h2 class="mt-1 text-xl font-bold text-highlighted">{{ event.name }} 🎊</h2>
+      <p class="text-xs font-semibold tracking-widest text-primary">
+        ENCUENTRO JUVENIL
+      </p>
+      <h2 class="mt-1 text-xl font-bold text-highlighted">
+        {{ event.name }} 🎊
+      </h2>
       <p class="mt-1 text-sm text-muted">
         ¡Ya falta poco para encontrarnos, celebrar la fe y disfrutar como comunidad!
       </p>
 
-      <div v-if="countdownReady && !eventStarted" class="mt-4" aria-live="polite">
-        <p class="text-xs font-medium text-toned">Faltan</p>
+      <div
+        v-if="countdownReady && !eventStarted"
+        class="mt-4"
+        aria-live="polite"
+      >
+        <p class="text-xs font-medium text-toned">
+          Faltan
+        </p>
         <div class="mt-2 grid grid-cols-3 gap-2">
-          <div v-for="unit in countdown" :key="unit.label" class="rounded-lg bg-elevated px-2 py-2">
+          <div
+            v-for="unit in countdown"
+            :key="unit.label"
+            class="rounded-lg bg-elevated px-2 py-2"
+          >
             <span class="block text-lg font-bold text-highlighted">{{ unit.value }}</span>
             <span class="block text-xs text-muted">{{ unit.label }}</span>
           </div>
         </div>
-        <p class="mt-3 text-xs text-muted">30 de agosto · 2:00 p. m.</p>
+        <p class="mt-3 text-xs text-muted">
+          30 de agosto · 2:00 p. m.
+        </p>
       </div>
-      <p v-else-if="eventStarted" class="mt-4 font-medium text-primary">¡La jornada ya empezó! 🙌🏼</p>
-      <p v-else class="mt-4 text-xs text-muted">30 de agosto · 2:00 p. m.</p>
+      <p
+        v-else-if="eventStarted"
+        class="mt-4 font-medium text-primary"
+      >
+        ¡La jornada ya empezó! 🙌🏼
+      </p>
+      <p
+        v-else
+        class="mt-4 text-xs text-muted"
+      >
+        30 de agosto · 2:00 p. m.
+      </p>
     </section>
 
     <a
@@ -104,7 +130,10 @@ onBeforeUnmount(() => {
     >
       <span class="flex items-center gap-3">
         <span class="grid size-10 shrink-0 place-items-center rounded-full bg-secondary/15 text-secondary">
-          <UIcon name="i-lucide-sparkles" class="size-5" />
+          <UIcon
+            name="i-lucide-sparkles"
+            class="size-5"
+          />
         </span>
         <span>
           <span class="block font-semibold text-highlighted">{{ aura.label }}</span>
@@ -149,7 +178,10 @@ onBeforeUnmount(() => {
           aria-label="Ver contactos de coordinación"
         >
           <span class="flex items-center gap-3 text-left">
-            <UIcon name="i-simple-icons-whatsapp" class="size-5 shrink-0 text-primary" />
+            <UIcon
+              name="i-simple-icons-whatsapp"
+              class="size-5 shrink-0 text-primary"
+            />
             <span>
               <span class="block font-medium text-default">Hablar con coordinación</span>
               <span class="block text-xs text-muted">Elige a uno de los 2 coordinadores</span>
@@ -174,7 +206,10 @@ onBeforeUnmount(() => {
             class="group flex items-center justify-between gap-3 rounded-lg px-3 py-2.5 hover:bg-accented"
           >
             <span class="flex items-center gap-3">
-              <UIcon :name="coordinator.icon" class="size-5 text-primary" />
+              <UIcon
+                :name="coordinator.icon"
+                class="size-5 text-primary"
+              />
               <span>
                 <span class="block text-sm font-medium text-default">{{ coordinator.label }}</span>
                 <span class="block text-xs text-muted">Coordinación del grupo parroquial</span>
